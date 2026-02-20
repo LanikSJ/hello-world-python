@@ -7,11 +7,11 @@ on:
   push:
     branches: [ "main" ]
     paths:
-      - *.py
+      - "*.py"
   pull_request:
     branches: [ "main" ]
     paths:
-      - *.py
+      - "*.py"
 
 permissions:
   contents: read
@@ -40,4 +40,4 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Test with pytest
       run: |
-        pytest
+        pytest tests/
