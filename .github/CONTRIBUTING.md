@@ -1,6 +1,6 @@
 # Contributing
 
-We welcome contributions to this Docker-based web service project!
+We welcome contributions to this Python "Hello World" application project!
 Please take a moment to review this document to understand how you can
 contribute effectively.
 
@@ -8,7 +8,7 @@ contribute effectively.
 
 When contributing to this repository, please first discuss the change you
 wish to make via
-[GitHub Issues](https://github.com/LanikSJ/docker-web-service/issues),
+[GitHub Issues](https://github.com/LanikSJ/hello-world-python/issues),
 email, or any other method with the repository maintainers before making a
 change.
 
@@ -17,14 +17,11 @@ interactions with the project.
 
 ## Development Environment Setup
 
-To set up a development environment for contributing to this Docker web
-service:
+To set up a development environment for contributing to this Python project:
 
 ### Prerequisites
 
-- [Docker](https://docs.docker.com/get-docker/)
-- [Docker Compose](https://docs.docker.com/compose/install/)
-  (optional, for local testing)
+- [Python 3.x](https://www.python.org/downloads/)
 - Git
 
 ### Local Development
@@ -32,89 +29,77 @@ service:
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/LanikSJ/docker-web-service.git
-   cd docker-web-service
+   git clone https://github.com/LanikSJ/hello-world-python.git
+   cd hello-world-python
    ```
 
-2. **Build the Docker image locally:**
+2. **Run the application:**
 
    ```bash
-   docker build -t docker-web-service .
+   python3 hello_world_app.py
    ```
 
-3. **Run the container for testing:**
+3. **Expected output:**
 
    ```bash
-   docker run -p 8080:80 docker-web-service
+   Hello, World!
+   Welcome to Python programming!
    ```
-
-4. **Access the web service:**
-   Open your browser to `http://localhost:8080`
 
 ### Testing Your Changes
 
-- **Build and verify:** Ensure your changes build successfully
-- **Security scan:** Run security scans on your Docker image
-- **Multi-platform test:** Test on different platforms if applicable
-- **Base image compatibility:** Verify compatibility with the base
-  [docker-php-alpine](https://github.com/LanikSJ/docker-php-alpine) image
+- **Run the application:** Ensure your changes work correctly
+- **Run tests:** Execute the test suite to verify functionality
+- **Code style:** Follow Python best practices and PEP 8 guidelines
+- **Documentation:** Update documentation for any new features
 
 ## Issue Reporting
 
 When reporting bugs or requesting features:
 
 1. **Check existing issues:** Search
-   [GitHub Issues](https://github.com/LanikSJ/docker-web-service/issues) first
+   [GitHub Issues](https://github.com/LanikSJ/hello-world-python/issues) first
 2. **Use issue templates:** Follow the provided issue templates for bugs,
    features, or questions
-3. **Provide context:** Include Docker version, OS, and steps to reproduce
+3. **Provide context:** Include Python version, OS, and steps to reproduce
    issues
-4. **Docker-specific details:** For Docker-related issues, include:
+4. **Python-specific details:** For Python-related issues, include:
 
-   - Docker version and platform
-   - Container logs (`docker logs <container_id>`)
-   - Image build output
-   - Network configuration if relevant
+   - Python version (`python3 --version`)
+   - Operating system and version
+   - Steps to reproduce the issue
+   - Expected vs actual behavior
 
 ## Pull Request Process
 
-1. **Clean up dependencies:** Ensure any install or build dependencies are
-   removed before the end of the layer when doing a build
-2. **Update documentation:** Update the README.md with details of changes to
-   the interface, including new environment variables, exposed ports, useful
-   file locations, and container parameters
-3. **Version bumping:** Increase the version numbers in any examples files
-   and the README.md to the new version that this Pull Request would
-   represent. The versioning scheme we use is [SemVer](https://semver.org/)
-4. **Testing requirements:** All PRs must pass CI checks including:
-   - Docker image build
-   - Security scanning
-   - Automated tests (if applicable)
-5. **Review process:** You may merge the Pull Request once you have the
+1. **Code quality:** Ensure your code follows Python best practices
+2. **Update documentation:** Update the README.md with details of changes if applicable
+3. **Testing:** All PRs must pass the test suite including:
+   - Unit tests
+   - Integration tests (if applicable)
+4. **Review process:** You may merge the Pull Request once you have the
    sign-off of two other developers, or if you do not have permission to do
    that, you may request the second reviewer to merge it for you
 
 ### Pull Request Checklist
 
-- [ ] Builds successfully without errors
-- [ ] Passes security scans
-- [ ] Includes tests for new functionality
-- [ ] Updates documentation as needed
-- [ ] Follows existing code and Docker best practices
-- [ ] Tested on multiple platforms/architectures
-- [ ] Includes breaking change notes if applicable
+- [ ] Code follows the project's style guidelines
+- [ ] Self-review of the code has been performed
+- [ ] Code is properly commented and documented
+- [ ] Corresponding changes to documentation have been made
+- [ ] New and existing unit tests pass locally
+- [ ] Any dependent changes have been merged and published
 
-## Docker Best Practices
+## Python Best Practices
 
-When contributing Docker-related changes:
+When contributing Python code:
 
-- **Layer optimization:** Minimize layer count and optimize for build caching
-- **Security:** Follow container security best practices
-- **Base image:** Changes to the Dockerfile should consider compatibility
-  with the base image
-- **Multi-stage builds:** Consider using multi-stage builds for optimization
-- **Labels:** Include appropriate Docker labels for metadata
-- **Health checks:** Add health checks where appropriate
+- **PEP 8 compliance:** Follow Python style guidelines
+- **Documentation:** Include docstrings for functions and modules
+- **Testing:** Write tests for new functionality
+- **Error handling:** Implement appropriate error handling
+- **Code clarity:** Write clear, readable code
+- **Dependencies:** Minimize external dependencies for this simple project
 
 ## Code of Conduct
 
