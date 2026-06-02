@@ -1,4 +1,4 @@
-# AI Rules & Project Standards for hello-world-python
+# Agent Rules & Project Standards for hello-world-python
 
 ## Repository Overview
 
@@ -22,7 +22,8 @@ hello-world-python is a simple Python project template and demonstration.
 
 ### Markdown Compliance Requirements (MANDATORY)
 
-- **ALL markdown files (.md) MUST pass markdownlint validation with zero errors or warnings**
+- **ALL markdown files (.md) MUST pass markdownlint validation with zero
+  errors or warnings**
 - Run `markdownlint <filename>` on every markdown file before considering it complete
 - Follow the project's `.markdownlint.json` configuration strictly
 - Address ALL markdownlint issues immediately - no exceptions or workarounds
@@ -44,7 +45,8 @@ hello-world-python is a simple Python project template and demonstration.
 
 - Preserve existing functionality unless explicitly asked to change it
 - Update documentation when adding new features
-- **Always run markdownlint and fix all issues in markdown files before considering changes complete**
+- **Always run markdownlint and fix all issues in markdown files before
+  considering changes complete**
 
 ### Project Template Standards
 
@@ -54,7 +56,8 @@ hello-world-python is a simple Python project template and demonstration.
 
 ## GitHub & Automation Standards
 
-These rules apply specifically to files in `.github/*` (workflows, templates, and documentation).
+These rules apply specifically to files in `.github/*` (workflows,
+templates, and documentation).
 
 ### Quality Gates (MANDATORY)
 
