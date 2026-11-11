@@ -40,7 +40,7 @@ jobs:
       - name: Update Skills
         run: |
           echo "Checking for skill updates..."
-          npx skills update --yes || echo "No updates found or skills CLI not available"
+          npx skills update --yes
 
       - name: Check for Changes
         id: git-check
@@ -68,31 +68,19 @@ jobs:
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
 
-      - name: Create Branch
-        if: steps.git-check.outputs.has_changes == 'true'
-        run: |
-          git checkout -b skills/update-automated
-
-      - name: Commit Changes
-        if: steps.git-check.outputs.has_changes == 'true'
-        run: |
-          git add skills-lock.json
-          git commit -m "chore(skills): update skills from npm skills update
-
-          Updated skills based on latest versions available via npm skills update.
-          This may include bug fixes, new features, or security patches."
-
-      - name: Push Changes
-        if: steps.git-check.outputs.has_changes == 'true'
-        run: |
-          git push origin skills/update-automated
-
       - name: Create Pull Request
         if: steps.git-check.outputs.has_changes == 'true'
         uses: peter-evans/create-pull-request@3ffccacd46053766916f087ce41d627c0b8cf2d1 # v8.1.3
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          commit-message: 'chore(skills): update skills from npm skills update'
+          add-paths: skills-lock.json
+          author: github-actions[bot] <github-actions[bot]@users.noreply.github.com>
+          committer: github-actions[bot] <github-actions[bot]@users.noreply.github.com>
+          commit-message: |
+            chore(skills): update skills from npm skills update
+
+            Updated skills based on latest versions available via npm skills update.
+            This may include bug fixes, new features, or security patches.
           branch: skills/update-automated
           title: 'chore(skills): update skills from npm skills update'
           body: |

@@ -70,10 +70,10 @@ A GitHub Actions workflow automatically checks for skill updates weekly:
 
 ```bash
 # Check for skill updates
-npm skills update
+npx skills update
 
 # Install/upgrade specific skills
-npm skills update <skill-name>
+npx skills update <skill-name>
 ```
 
 ### Workflow File
