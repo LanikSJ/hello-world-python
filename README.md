@@ -59,9 +59,9 @@ This project uses the `skills` CLI (npm package) to manage Agent Skills. The ski
 
 ### Automated Updates
 
-A GitHub Actions workflow automatically checks for skill updates weekly:
+A GitHub Actions workflow automatically checks for skill updates monthly:
 
-- **Schedule**: Every Sunday at 00:00 UTC
+- **Schedule**: Monthly on the 4th at 00:00 UTC
 - **Action**: Runs `npm skills update` to check for updates
 - **Cleanup**: Removes any local `.agents/` folder (uses global `.agents` config)
 - **Output**: Creates a pull request with any changes
